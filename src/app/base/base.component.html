@@ -1,0 +1,25 @@
+<div class="container" (click)="hideBottom()">
+    <div class="left">
+        <div class="hero_items">
+            <h1 *ngFor="let p of projects" [ngClass]="selectedProject?.title==p.title?'project_selected':''"  (click)="showProject($event, p)">{{p.title}}</h1>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="project_items">
+            <app-project *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" [project]="selectedProject">{{selectedProject?.title}}</app-project>
+        </div>
+    </div>       
+
+    
+</div>
+<div class="nav">
+    <ul>
+        <li>
+            about
+        </li>
+        <li>
+            contact
+        </li>
+    </ul>
+</div>

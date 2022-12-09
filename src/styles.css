@@ -1,1 +1,144 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+    padding:0;
+    scrollbar-width: none;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scrollbar-width: thin;
+    background: linear-gradient(60deg, 
+    rgb(72, 16, 106) 0%, rgb(61, 106, 158) 65%, rgb(50, 197, 210)) fixed;
+    color: rgb(189, 210, 212);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+    padding: 0px 25px;
+}
+.left{
+    width: 66%;
+    margin-left:10%;
+    left: 0;
+    margin-left: 0;
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.right{
+    right: 0;
+    text-align: right;
+    width: 33%;
+    height: fit-content;
+    perspective: 800px;
+}
+
+.hero_items{
+    margin: 0% 0% 10% 10%;
+    text-transform: uppercase;
+    min-width: fit-content;
+    color:rgba(0,0,0,0);
+    perspective: 800px;
+    -webkit-text-stroke: 1px rgb(244, 182, 252);
+    transition: 0.3s;
+}
+
+.hero_items h1{
+    transform: rotateY(25deg);
+    font-size: 3.6rem;
+    cursor: crosshair;
+    transition: 0.3s;
+}
+
+.hero_items h1:hover{
+    text-shadow: -5px 0px 15px rgba(250, 213, 255, 0.35);
+    font-size: 3.9rem;
+    color: rgba(244, 182, 252, 0.05);
+    transition: 0.3s;
+}
+.hero_items h1.project_selected{
+    text-shadow: -15px 0px 10px rgba(250, 213, 255, 0.3);
+    color: rgba(244, 182, 252, 0.1);
+    transition: 0.75s;
+}
+.hero_items h1.project_selected{
+    margin-left:10px;
+    transition: 0.5s;
+}
+
+
+.project_items{
+    margin-right: 10%;
+    text-transform: uppercase;
+    transform: rotateY(-25deg);
+}
+
+.nav{
+    position: fixed;
+    bottom:0;
+    right:0;
+    margin:auto, 0, 0, auto;
+    padding:25px;
+    justify-items: end;
+    text-align: end;
+    cursor: crosshair;
+}
+
+.nav ul{
+    -webkit-text-stroke: 1px rgb(189, 210, 212);
+    color:rgba(187, 228, 231,0.7);
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+
+@media (max-width:900px){
+    .container{
+        display: block;
+        width: calc(100% - 50px);
+        scrollbar-width: none;
+        padding-top:10%;
+    }
+
+    .left{
+        margin-left: 5%;
+        padding: 25px 0px 0px 0px;
+        display: block;
+        width: 100%;
+        height: fit-content;
+    }
+    .right{
+        margin-right: 5%;
+        padding: 0px 25px 0px 0px;
+        display: block;
+        width: 100%;
+    }
+    .hero_items{
+        margin: 0px auto 0px 5%;
+        height: 60%;
+        min-height: fit-content;
+    }
+    .hero_items h1{
+        font-size: 2.6rem;
+    }
+    
+    .hero_items h1:hover{
+        font-size: 2.9rem;
+    }
+
+    .project_items{
+        margin: 10% 5% 0px auto;
+    }
+
+    .nav{
+        position: fixed;
+        top:0;
+        margin:0, 0, auto, auto;
+        justify-items: end;
+        text-align: end;
+    }
+}
